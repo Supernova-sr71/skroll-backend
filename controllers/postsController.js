@@ -20,6 +20,17 @@ exports.createPost=async (req, res)=>{
     }
 };
 
+exports.getPost = async (req, res) => {
+    try {
+      const post = await Post.findById(req.params.id).populate('author', 'username displayName avatarUrl');
+      if (!post) return res.status(404).json({ message: 'Not found' });
+      res.json(post);
+    } catch (err) {
+      console.error(err);
+      res.status(500).json({ message: 'Server error' });
+    }
+  };
+  
 exports.getFeed= async(req,res)=>{
     try{
         const page= Math.max(1, parseInt(req.query.page || '1'));
