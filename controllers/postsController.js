@@ -1,5 +1,5 @@
-const Post=require('models/Post')
-const User=require('models/User')
+const Post=require('/Users/abhinavkrishna/Skroll-Backend/models/Post')
+const User=require('/Users/abhinavkrishna/Skroll-Backend/models/User')
 const path=require('path');
 
 exports.createPost=async (req, res)=>{
@@ -30,7 +30,7 @@ exports.getPost = async (req, res) => {
       res.status(500).json({ message: 'Server error' });
     }
   };
-  
+
 exports.getFeed= async(req,res)=>{
     try{
         const page= Math.max(1, parseInt(req.query.page || '1'));
@@ -52,7 +52,7 @@ exports.getFeed= async(req,res)=>{
         res.json({page, limit, total, posts});
     }
     catch (err){
-        console.err(err);
+        console.error(err);
         res.status(500).json({message:"Server error I guess OOpss!!!"});
     }
 };

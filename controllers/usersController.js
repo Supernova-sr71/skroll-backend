@@ -1,5 +1,5 @@
-const User=require('models/User');
-const Post=require('models/Post');
+const User=require('/Users/abhinavkrishna/Skroll-Backend/models/User');
+const Post=require('/Users/abhinavkrishna/Skroll-Backend/models/Post');
 
 exports.getProfile= async (req, res)=>{
     try{

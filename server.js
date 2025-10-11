@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const connectDB = require('./config/db');
+const connectDB = require('/Users/abhinavkrishna/Skroll-Backend/config/db.js');
 const path = require('path');
 
 const app = express();

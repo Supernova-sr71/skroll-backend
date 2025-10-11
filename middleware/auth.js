@@ -1,5 +1,5 @@
 const jwt=require('jsonwebtoken');
-const User=require('models.User');
+const User=require('/Users/abhinavkrishna/Skroll-Backend/models/User');
 require('dotenv').config();
 
 module.exports=async function(req, res, next){

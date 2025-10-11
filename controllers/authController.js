@@ -1,7 +1,7 @@
 const bcrypt=require('bcrypt');
 const { use } = require('bcrypt/promises');
 const jwt=require('jsonwebtoken');
-const User=require('models/User');
+const User=require('/Users/abhinavkrishna/Skroll-Backend/models/User');
 require('dotenv').config();
 
 const SALT_ROUNDS=10;
@@ -20,7 +20,7 @@ exports.register=async (req,res) =>{
         res.json({token, user:{id:user._id, username:user.username, email:user.email, displayName:user.displayName}});
     }
     catch (err){
-        console.err(err);
+        console.error(err);
         res.status(500).json({message:"Server Error"});
     }
 };

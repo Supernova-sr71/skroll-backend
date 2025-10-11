@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const auth = require('middleware/auth');
-const upload = require('middleware/upload');
-const posts = require('controllers/postsController');
+const auth = require('/Users/abhinavkrishna/Skroll-Backend/middleware/auth');
+const upload = require('/Users/abhinavkrishna/Skroll-Backend/middleware/upload');
+const posts = require('/Users/abhinavkrishna/Skroll-Backend/controllers/postsController');
 
 router.post('/', auth, upload.single('media'), posts.createPost);
 router.get('/feed', auth, posts.getFeed);
