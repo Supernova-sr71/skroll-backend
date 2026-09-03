@@ -2,6 +2,6 @@ services:
   app:
     build: .
     ports:
-      - "3000:3000"
+      - "3080:3080"
     env_file:
       - .env
